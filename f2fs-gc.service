@@ -1,0 +1,9 @@
+[Unit]
+Description="Simple script to run gc on all f2fs partitions"
+Wants=f2fs-gc.timer
+
+[Service]
+ExecStart=/usr/bin/f2fs-gc.sh
+
+[Install]
+WantedBy=multi-user.target

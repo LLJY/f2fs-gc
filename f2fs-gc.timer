@@ -1,0 +1,9 @@
+[Unit]
+Description="Cron job that runs f2fs GC every 8 hours"
+
+[Timer]
+Unit=f2fs-gc.service
+OnUnitActiveSec=8h
+
+[Install]
+WantedBy=timers.target
